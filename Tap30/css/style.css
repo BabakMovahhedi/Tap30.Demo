@@ -202,8 +202,9 @@ color: var(--color-white);
         }
         }
         .container{
-            /* max-width: 1140px; */
+            max-width: 1140px;
             margin: 0 auto;
+            
         }
         /* feature */
 
@@ -240,3 +241,167 @@ color: var(--color-white);
                order: 1;
            }
             }
+
+            /* contact-us */
+
+            .contact-us{
+                display: grid;
+            }
+            .contact-us__map{
+                display: none;
+            }
+
+            @media screen and (min-width:1024px) {
+                .contact-us{
+                    grid-template-areas: 
+                   '  address form'
+                   '  icons form'
+                   ' map form' ;  
+                   grid-template-columns: 70fr 30fr;                   
+                }
+                .contact-us__form{
+                    grid-area: form;
+                }
+                .contact-us__map{
+                    grid-area: map;
+                    display: block;
+                }
+                .contact-us__social{
+                    grid-area:icons;
+                    }
+                .contact-us__icons{
+                    grid-area: address;
+                }    
+                 }
+    /* icon */
+
+    .icon{
+        width: 40px;
+        height: 40px;
+        color: var(--color-primaray);
+    }
+    .icon_container{
+        background-color: antiquewhite;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+    }
+    
+    .contact-us__social{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+    }
+    .contact-us__social .icon__holder{
+        display: flex;
+        align-items: center;
+        
+        margin-bottom: 2rem;
+    }
+    .icon__holder__label{
+        margin-left: 2rem;
+        display: block;
+    }
+   
+    @media screen and (min-width:1024px) {
+        .contact-us__social{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .contact-us__social .icon__holder{
+            flex-direction: column;
+        }
+        .icon__holder__label{
+            order: 2;
+            font-size: 1.4rem;
+            margin-top: 1.5rem;
+        }
+         }
+
+         .contact-us__icons{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .contact-us__icons .icon_container{
+            margin-left: 2rem;
+        }
+        
+        @media screen and (min-width:1024px) {
+            .contact-us__icons{
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .contact-us__icons .icon__holder{
+                flex-direction: column;
+            }
+            .icon__holder__label{
+                order: 2;
+                font-size: 1.4rem;
+                margin-top: 1.5rem;
+            }
+    
+             }
+
+             /* image */
+             .contact-us__map{
+                 width: 100%;
+                 height: auto;
+             }
+
+
+             /* form */
+             .contact-us__form{
+                 margin-right: 3rem;
+             }
+             .form-wraper{
+                 height: 100%;
+                 border: 1px solid #ccc;
+                 padding: 1rem ;
+                 border-radius: 10px;
+                 background-color: white;
+
+                 }
+
+             .form-wraper h3{
+                 margin: 5.3rem 0;
+                 text-align: center;
+             }    
+             .form-wraper form{
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: space-between;
+                 height: 80%;
+             }
+             input
+             ,textarea{
+                 display: block;
+                 outline: 0;
+                 border: 0;
+                              }
+            ::placeholder{
+                font-size: 1.4rem;
+                color:#333333;
+                font-family: 'vazir';
+            }
+            .form-wraper input:focus,
+            .form-wraper textarea:focus {
+                border: 1px solid var(--color-primaray);
+            }
+             .form-wraper input ,textarea{
+                 border-radius: 40px;
+                 border: 1px solid #ccc;
+                 padding:1.5rem 1.5rem;
+                 background: #f5f5f5;
+             }
+             .form-wraper textarea{
+                 border-radius: 5px;
+             }
+             textarea{
+                 resize: none;
+             }
