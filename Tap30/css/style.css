@@ -712,7 +712,9 @@ justify-content: center;
 
 
     /* services */
-    .services{
+
+    
+.services{
         margin-top: 20px;
     }
 
@@ -725,8 +727,9 @@ justify-content: center;
        
     }
 .services_tabs img {
-max-width: 85px;
+        max-width: 85px;
 }
+
 .services_tabs a {
     display: block;
     color: #444;
@@ -792,7 +795,6 @@ max-width: 85px;
 
 }
 
-
 .block{
-    padding: 1rem 2rem;
+    padding: 3rem 1rem;
 }
